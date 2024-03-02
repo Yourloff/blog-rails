@@ -1,1 +1,9 @@
-<h1>Hello, Rails!</h1>
+<h1>Статьи</h1>
+
+<ul>
+  <% @artciles.each do |article| %>
+    <li>
+      <%= article.title %>
+    </li>
+  <% end %>
+</ul>
