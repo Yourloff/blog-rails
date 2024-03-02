@@ -1,9 +1,9 @@
 <h1>Статьи</h1>
 
 <ul>
-  <% @artciles.each do |article| %>
+  <% @articles.each do |article| %>
     <li>
-      <%= article.title %>
+      <%= link_to article.title, article %>
     </li>
   <% end %>
 </ul>
