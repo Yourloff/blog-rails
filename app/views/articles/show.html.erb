@@ -11,16 +11,7 @@
 <%= link_to 'Все статьи', articles_path %>
 
 <h2>Комментарии:</h2>
-<% @article.comments.each do |comment| %>
-  <p>
-    <strong><%= comment.commenter %></strong>
-  </p>
-
-  <p>
-    <strong>Комментарий:</strong>
-    <%= comment.body %>
-  </p>
-<% end %>
+<%= render @article.comments %>
 
 <h2>Добавить комментарий:</h2>
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
