@@ -7,4 +7,9 @@
     <strong>Комментарий:</strong>
     <%= comment.body %>
   </p>
+
+  <%= link_to 'Удалить', [comment.article, comment], data: {
+    turbo_method: :delete,
+    turbo_confirm: 'Вы уверены?'
+  } %>
 <% end %>
