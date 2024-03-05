@@ -1,10 +1,14 @@
 <h1>Статьи</h1>
 
+Количество статей <%= Article.public_count %> и это количество растёт!
+
 <ul>
   <% @articles.each do |article| %>
-    <li>
-      <%= link_to article.title, article %>
-    </li>
+    <% unless article.archived? %>
+      <li>
+        <%= link_to article.title, article %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
 
